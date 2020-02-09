@@ -22,29 +22,37 @@ class DefaultController extends AbstractController
             'title' => 'homepage',
         ]);
 
-        
+         
     }
 
     /**
-     * @Route("/add-resource", name="add_resource")
+     * @Route("/add-resource", name="add_resource", methods={"POST"})
      */
-    public function add_resource()
+    public function add_resource(Request $request)
     {   
-        $entityManager = $this->getDoctrine()->getManager();
+        // $entityManager = $this->getDoctrine()->getManager();
 
-        $resource = new Resource();
-        $resource->setValue('Sample Value');
-        $resource->setNumber(rand('1', '200'));
+        // $resource = new Resource();
+        // $resource->setValue('Sample Value');
+        // $resource->setNumber(rand('1', '200'));
         
-        // tell Doctrine you want to (eventually) save the Product (no queries yet)
-        $entityManager->persist($resource);
+        // // tell Doctrine you want to (eventually) save the Product (no queries yet)
+        // $entityManager->persist($resource);
 
-        // actually executes the queries (i.e. the INSERT query)
-        $entityManager->flush();
+        // // actually executes the queries (i.e. the INSERT query)
+        // $entityManager->flush();
 
-        return $this->render('default/add.html.twig', [
-            'title' => 'add resource',
-        ]);
+        
+
+       
+
+        // return $this->render('default/add.html.twig', [
+        //     'title' => 'add resource',
+        // ]);
+        var_dump($request);
+        exit('test');
+
+
 
         
     }
