@@ -30,27 +30,32 @@ class DefaultController extends AbstractController
      */
     public function add_resource(Request $request)
     {   
-        // $entityManager = $this->getDoctrine()->getManager();
+        $entityManager = $this->getDoctrine()->getManager();
 
-        // $resource = new Resource();
-        // $resource->setValue('Sample Value');
-        // $resource->setNumber(rand('1', '200'));
-        
-        // // tell Doctrine you want to (eventually) save the Product (no queries yet)
-        // $entityManager->persist($resource);
+        $resource = new Resource();
 
-        // // actually executes the queries (i.e. the INSERT query)
-        // $entityManager->flush();
+      
+        $value = $request->request->get('stringValue');
+        $number = $request->request->get('numberInput');
+
+        $resource->setValue($value);
+        $resource->setNumber($number);
+
+ 
+        // tell Doctrine you want to (eventually) save the Product (no queries yet)
+        $entityManager->persist($resource);
+
+        // actually executes the queries (i.e. the INSERT query)
+        $entityManager->flush();
 
         
 
        
 
-        // return $this->render('default/add.html.twig', [
-        //     'title' => 'add resource',
-        // ]);
-        var_dump($request);
-        exit('test');
+        return $this->render('default/add.html.twig', [
+            'title' => 'add resource',
+        ]);
+       
 
 
 
