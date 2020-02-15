@@ -18,5 +18,7 @@ return [
     'default' => [[], ['_controller' => 'App\\Controller\\DefaultController::home'], [], [['text', '/']], [], []],
     'add_resource' => [[], ['_controller' => 'App\\Controller\\DefaultController::add_resource'], [], [['text', '/add-resource']], [], []],
     'database' => [[], ['_controller' => 'App\\Controller\\DefaultController::database'], [], [['text', '/database']], [], []],
+    'toedit' => [['id'], ['_controller' => 'App\\Controller\\DefaultController::toEdit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/toedit']], [], []],
+    'edit-resource' => [['id'], ['_controller' => 'App\\Controller\\DefaultController::editresource'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/edit-resource']], [], []],
     'delete' => [['id'], ['_controller' => 'App\\Controller\\DefaultController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], []],
 ];

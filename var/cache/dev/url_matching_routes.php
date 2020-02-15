@@ -34,7 +34,9 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/delete/([^/]++)(*:185)'
+                .'|/toedit/([^/]++)(*:185)'
+                .'|/edit\\-resource/([^/]++)(*:217)'
+                .'|/delete/([^/]++)(*:241)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -45,7 +47,9 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        185 => [
+        185 => [[['_route' => 'toedit', '_controller' => 'App\\Controller\\DefaultController::toEdit'], ['id'], null, null, false, true, null]],
+        217 => [[['_route' => 'edit-resource', '_controller' => 'App\\Controller\\DefaultController::editresource'], ['id'], null, null, false, true, null]],
+        241 => [
             [['_route' => 'delete', '_controller' => 'App\\Controller\\DefaultController::delete'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

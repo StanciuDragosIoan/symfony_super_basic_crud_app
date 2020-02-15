@@ -124,6 +124,10 @@ class __TwigTemplate_44efb55a31c3346624b800fe68ddb75d3ea22458b164d2d33eacd1abb3a
             // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["resource"], "id", [], "any", false, false, false, 25), "html", null, true);
             echo "\">delete me</a>
+                         <a class=\"btn btn-warning\" href=\"/toedit/";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["resource"], "id", [], "any", false, false, false, 26), "html", null, true);
+            echo "\">edit me</a>
                     </div>
                     
                 ";
@@ -131,7 +135,7 @@ class __TwigTemplate_44efb55a31c3346624b800fe68ddb75d3ea22458b164d2d33eacd1abb3a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['resource'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 30
         echo "            </div>
       </div>
     </div>
@@ -158,7 +162,7 @@ class __TwigTemplate_44efb55a31c3346624b800fe68ddb75d3ea22458b164d2d33eacd1abb3a
 
     public function getDebugInfo()
     {
-        return array (  135 => 29,  125 => 25,  120 => 23,  115 => 21,  110 => 19,  105 => 16,  101 => 15,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
+        return array (  139 => 30,  129 => 26,  125 => 25,  120 => 23,  115 => 21,  110 => 19,  105 => 16,  101 => 15,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -188,6 +192,7 @@ class __TwigTemplate_44efb55a31c3346624b800fe68ddb75d3ea22458b164d2d33eacd1abb3a
                            <span class=\" card  w-25 bg-dark text-light\"> {{ resource.id }}</span> 
                         </p>
                         <a class=\"btn btn-danger\" href=\"/delete/{{resource.id}}\">delete me</a>
+                         <a class=\"btn btn-warning\" href=\"/toedit/{{resource.id}}\">edit me</a>
                     </div>
                     
                 {% endfor %}

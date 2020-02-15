@@ -79,6 +79,70 @@ class DefaultController extends AbstractController
         
     }
 
+     /**
+     * @Route("/toedit/{id}", name="toedit")
+     */
+    public function toEdit(Request $request)
+    {   
+         
+        $repository = $this->getDoctrine()->getRepository(Resource::class);
+
+        
+        $id = $request->attributes->get('id');
+         
+        
+  
+       
+        $resource =  $repository->find($id);
+
+        // $entityManager = $this->getDoctrine()->getManager();
+
+        // $entityManager->remove($resource);
+        // $entityManager->flush();
+
+        return $this->render('default/to-edit.html.twig', [
+            'title' => 'edit', 
+            'id' => $id,
+            'resource' => $resource
+        ]);
+
+        
+    }
+
+    /**
+     * @Route("/edit-resource/{id}", name="edit-resource")
+     */
+    public function editresource(Request $request)
+    {   
+        $repository = $this->getDoctrine()->getRepository(Resource::class);
+        $id = $request->attributes->get('id');
+        $resource =  $repository->find($id);
+
+       
+
+        $newValue = $request->request->get('stringValue');
+        $newNumber = $request->request->get('numberInput');
+
+        $resource->setValue($newValue);
+        $resource->setNumber($newNumber);
+
+        $entityManager = $this->getDoctrine()->getManager();
+        // tell Doctrine you want to (eventually) save the Product (no queries yet)
+        $entityManager->persist($resource);
+
+        // actually executes the queries (i.e. the INSERT query)
+        $entityManager->flush();
+
+   
+
+        return $this->render('default/edited.html.twig', [
+            'title' => 'homepage',
+            'id' => $id
+        ]);
+
+         
+    }
+
     /**
      * @Route("/delete/{id}", name="delete")
      */
