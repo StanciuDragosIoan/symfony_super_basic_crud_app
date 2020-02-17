@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+
+{% block head %}
+
+  
+    {% block title %}Hello {{ title }}!{% endblock %}
+
+{% endblock %}
+{% block body %}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Welcome to the login page</h1>
+                {# <a class="btn btn-dark d-block w-25" href="/add-resource">Add resource</a>   #}
+        <form action="/try-login" method="POST">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" name="username" class="form-control" aria-describedby="userName" placeholder="Enter your username">
+              <small id="userName" class="form-text text-muted">Type sum shit</small>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" class="form-control"  aria-describedby="passWord" name="passwordInput" 
+              placeholder="Enter password" id="passWord">
+            </div>
+           
+            <button type="submit" class="btn btn-dark d-block w-25">Login</button>
+          </form>
+        
+        </div>
+    </div>
+ 
+{% endblock %}

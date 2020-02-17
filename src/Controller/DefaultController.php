@@ -172,10 +172,34 @@ class DefaultController extends AbstractController
         
     }
 
-    public function getId(){
+     
+    /**
+     * @Route("/login", name="login")
+     */
+    public function login()
+    {   
+        
+        return $this->render('login/login.html.twig', [
+            'title' => 'loginForm',
+        ]);
 
-        $id = 120;
-
-        return $id;
+         
     }
+
+    /**
+     * @Route("/try-login", name="try-login")
+     */
+    public function trylogin()
+    {   
+        
+        die('attempting login...');
+        
+         
+    }
+
+    
+
+
+
+
 }

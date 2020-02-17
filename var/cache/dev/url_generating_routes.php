@@ -21,4 +21,6 @@ return [
     'toedit' => [['id'], ['_controller' => 'App\\Controller\\DefaultController::toEdit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/toedit']], [], []],
     'edit-resource' => [['id'], ['_controller' => 'App\\Controller\\DefaultController::editresource'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/edit-resource']], [], []],
     'delete' => [['id'], ['_controller' => 'App\\Controller\\DefaultController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\DefaultController::login'], [], [['text', '/login']], [], []],
+    'try-login' => [[], ['_controller' => 'App\\Controller\\DefaultController::trylogin'], [], [['text', '/try-login']], [], []],
 ];
