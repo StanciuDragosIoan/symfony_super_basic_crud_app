@@ -16,8 +16,8 @@ return [
         '/' => [[['_route' => 'default', '_controller' => 'App\\Controller\\DefaultController::home'], null, null, null, false, false, null]],
         '/add-resource' => [[['_route' => 'add_resource', '_controller' => 'App\\Controller\\DefaultController::add_resource'], null, ['POST' => 0], null, false, false, null]],
         '/database' => [[['_route' => 'database', '_controller' => 'App\\Controller\\DefaultController::database'], null, null, null, false, false, null]],
-        '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\DefaultController::login'], null, null, null, false, false, null]],
-        '/try-login' => [[['_route' => 'try-login', '_controller' => 'App\\Controller\\DefaultController::trylogin'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

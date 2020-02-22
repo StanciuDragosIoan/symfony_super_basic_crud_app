@@ -435,3 +435,17 @@ de342d,::1,GET,http://localhost:8000/database,1581916838,,200
 1d3147,::1,GET,http://localhost:8000/login,1581916855,,200
 ee4d8e,::1,POST,http://localhost:8000/try-login,1581916859,,200
 08b1ca,::1,GET,http://localhost:8000/,1581916871,,200
+b07340,::1,GET,http://localhost:8000/,1582347691,,200
+61fc1e,::1,GET,http://localhost:8000/favicon.ico,1582347692,10a014,404
+10a014,::1,GET,http://localhost:8000/favicon.ico,1582347692,,404
+2270da,::1,GET,http://localhost:8000/login,1582347700,,200
+637f4a,::1,GET,http://localhost:8000/login,1582348379,,200
+e4cbc2,::1,GET,http://localhost:8000/login,1582348686,,200
+919281,::1,GET,http://localhost:8000/login,1582348711,,200
+7e39a9,::1,GET,http://localhost:8000/login,1582348740,,200
+545184,::1,GET,http://localhost:8000/login,1582348760,,200
+35c7b2,::1,GET,http://localhost:8000/login,1582348777,,200
+3eb4b1,::1,GET,http://localhost:8000/login,1582348778,,200
+2f8704,::1,GET,http://localhost:8000/login,1582348782,,200
+268913,::1,POST,http://localhost:8000/login,1582348843,,302
+25b134,::1,GET,http://localhost:8000/login,1582348843,,200
